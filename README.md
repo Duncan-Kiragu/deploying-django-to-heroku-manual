@@ -48,6 +48,8 @@ Add the following settings to your Procfile
 web: gunicorn your_project_name.wsgi --log-file -
 ```
 
+
+
 #### 4. Selecting a runtime
 To specify a Python runtime, add a `runtime.txt` file to your app’s root 	    directory that declares the exact version number to use:
 ```python
@@ -55,7 +57,7 @@ nano runtime.txt
 ```
 Add the version below to the runtime.txt file
 	```python
-	python-3.7.2
+	python-3.7.4
 	```
 #### 5. Whitenoise: Django Static Files settings
 First configure static related parameter in `settings.py`
@@ -92,6 +94,21 @@ Add the following setting to `settings.py` in the static files section to enable
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ```
+
+#### Install the following python packages first;
+```python
+pip install python-dotenv
+```
+```python
+pip install django-heroku
+```
+```python
+pip install python-decouple
+```
+```python
+pip install dj-database-url
+```
+
 #### Requirements file.
 If your under a virtual environment run the command below to generate the requirements.txt file which heroku will use to install python package dependencies.
 ```python
@@ -135,20 +152,6 @@ DEBUG=True
 DATABASE_URL='postgres://vick:p@localhost/picsgarage'
 MODE='dev'  
 ALLOWED_HOSTS='*'
-```
-
-#### Install the following python packages first;
-```python
-pip install python-dotenv
-```
-```python
-pip install django-heroku
-```
-```python
-pip install python-decouple
-```
-```python
-pip install dj-database-url
 ```
 
 #### Add the following to the `settings.py` imports
@@ -206,6 +209,13 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 heroku config:set $(cat .env | sed '/^$/d; /#[[:print:]]*$/d')
 ```
 
+#### Push code to heroku
+```python
+git add .
+git commit -m "Commit message"
+git push heroku master
+```
+
 #### Pushing your DB to heroku
 Run the command below to push your local db to heroku
 ```
@@ -217,6 +227,6 @@ heroku pg:push picsgarage DATABASE_URL --app picsgarage
 
 ### And that's it...Your app should now be deployed to Heroku
 
-improved from [jakhax](https://github.com/jakhax/deploying-django-to-heroku-manual) deployment manual
+	improved from [@jakhax](https://github.com/jakhax/deploying-django-to-heroku-manual) deployment manual
 
 > &copy; Victor Waichigo 2019
