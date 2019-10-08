@@ -182,7 +182,7 @@ git push heroku master
 <pre class=" language-python"><code class="prism  language-python">heroku pg<span class="token punctuation">:</span>push picsgarage DATABASE_URL <span class="token operator">-</span><span class="token operator">-</span>app picsgarage
 </code></pre>
 <h3 id="and-thats-it...your-app-should-now-be-deployed-to-heroku">And that’s it…Your app should now be deployed to Heroku</h3>
-<p>improved from <a href="'%5Bhttps://github.com/jakhax/deploying-django-to-heroku-manual%5D(https://github.com/jakhax/deploying-django-to-heroku-manual)'">@jakhax</a> deployment manual</p>
+<p>improved from <a href="https://github.com/jakhax/deploying-django-to-heroku-manual%5D%28https://github.com/jakhax/deploying-django-to-heroku-manual">jakhax</a>deployment manual</p>
 <blockquote>
 <p>© Victor Waichigo 2019</p>
 </blockquote>
