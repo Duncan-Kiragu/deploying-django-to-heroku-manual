@@ -217,6 +217,6 @@ heroku pg:push picsgarage DATABASE_URL --app picsgarage
 
 ### And that's it...Your app should now be deployed to Heroku
 
-improved from [jakhax](https://github.com/jakhax/deploying-django-to-heroku-manual%5D%28https://github.com/jakhax/deploying-django-to-heroku-manual)deployment manual
+improved from [@jakhax](https://github.com/jakhax/deploying-django-to-heroku-manual%5D%28https://github.com/jakhax/deploying-django-to-heroku-manual) deployment manual
 
 > &copy; Victor Waichigo 2019
