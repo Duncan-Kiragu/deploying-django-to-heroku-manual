@@ -53,7 +53,7 @@ tags: 'Heroku, Deployment'
 <pre class=" language-python"><code class="prism  language-python">nano runtime<span class="token punctuation">.</span>txt
 </code></pre>
 <p>Add the version below to the runtime.txt file<br>
-<code>python 	python-3.7.2</code></p>
+<code>python 	python-3.7.4</code></p>
 <h4 id="whitenoise-django-static-files-settings">5. Whitenoise: Django Static Files settings</h4>
 <p>First configure static related parameter in <code>settings.py</code></p>
 <pre class=" language-python"><code class="prism  language-python">BASE_DIR <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>abspath<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
