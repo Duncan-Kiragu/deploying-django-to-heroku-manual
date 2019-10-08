@@ -79,11 +79,10 @@ pip install whitenoise
 ```
 Next, install `WhiteNoise` into your Django application. This is done in `settings.py’s middleware section` (at the top):
 ```python
-MIDDLEWARE_CLASSES = (
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    ...```
+    MIDDLEWARE = [  
+  'whitenoise.middleware.WhiteNoiseMiddleware',  
+]
+```
 
 Add the following setting to `settings.py` in the static files section to enable gzip functionality.
 
@@ -127,6 +126,7 @@ DB_PASSWORD='p'
 DB_HOST='127.0.0.1'  
 MODE='dev'  
 ALLOWED_HOSTS='*'
+DISABLE_COLLECTSTATIC=1
 ```
 or an easier way
 ```python
@@ -217,5 +217,5 @@ heroku pg:push picsgarage DATABASE_URL --app picsgarage
 
 ### And that's it...Your app should now be deployed to Heroku
 
-improved from [@jakhax]('https://github.com/jakhax/deploying-django-to-heroku-manual') deployment manual
+improved from @jakhax deployment manual
 > &copy; Victor Waichigo 2019
