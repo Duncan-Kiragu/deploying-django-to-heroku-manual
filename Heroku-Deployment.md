@@ -171,7 +171,9 @@ ALLOWED_HOSTS <span class="token operator">=</span> config<span class="token pun
 <pre class=" language-python"><code class="prism  language-python">heroku config<span class="token punctuation">:</span><span class="token builtin">set</span> $<span class="token punctuation">(</span>cat <span class="token punctuation">.</span>env <span class="token operator">|</span> sed <span class="token string">'/^$/d; /#[[:print:]]*$/d'</span><span class="token punctuation">)</span>
 </code></pre>
 <h4 id="push-code-to-heroku">Push code to heroku</h4>
-<pre class=" language-python"><code class="prism  language-python">git push heroku master
+<pre class=" language-python"><code class="prism  language-python">git add <span class="token punctuation">.</span>
+git commit <span class="token operator">-</span>m <span class="token string">"Commit message"</span>
+git push heroku master
 </code></pre>
 <h4 id="pushing-your-db-to-heroku">Pushing your DB to heroku</h4>
 <p>Run the command below to push your local db to heroku</p>
