@@ -82,6 +82,15 @@ So, let’s install <code>whitenoise</code></p>
 
 STATICFILES_STORAGE <span class="token operator">=</span> <span class="token string">'whitenoise.storage.CompressedManifestStaticFilesStorage'</span>
 </code></pre>
+<h4 id="install-the-following-python-packages-first">Install the following python packages first;</h4>
+<pre class=" language-python"><code class="prism  language-python">pip install python<span class="token operator">-</span>dotenv
+</code></pre>
+<pre class=" language-python"><code class="prism  language-python">pip install django<span class="token operator">-</span>heroku
+</code></pre>
+<pre class=" language-python"><code class="prism  language-python">pip install python<span class="token operator">-</span>decouple
+</code></pre>
+<pre class=" language-python"><code class="prism  language-python">pip install dj<span class="token operator">-</span>database<span class="token operator">-</span>url
+</code></pre>
 <h4 id="requirements-file.">Requirements file.</h4>
 <p>If your under a virtual environment run the command below to generate the requirements.txt file which heroku will use to install python package dependencies.</p>
 <pre class=" language-python"><code class="prism  language-python">pip freeze <span class="token operator">&gt;</span> requirements<span class="token punctuation">.</span>txt
@@ -118,15 +127,6 @@ DEBUG<span class="token operator">=</span><span class="token boolean">True</span
 DATABASE_URL<span class="token operator">=</span><span class="token string">'postgres://vick:p@localhost/picsgarage'</span>
 MODE<span class="token operator">=</span><span class="token string">'dev'</span>  
 ALLOWED_HOSTS<span class="token operator">=</span><span class="token string">'*'</span>
-</code></pre>
-<h4 id="install-the-following-python-packages-first">Install the following python packages first;</h4>
-<pre class=" language-python"><code class="prism  language-python">pip install python<span class="token operator">-</span>dotenv
-</code></pre>
-<pre class=" language-python"><code class="prism  language-python">pip install django<span class="token operator">-</span>heroku
-</code></pre>
-<pre class=" language-python"><code class="prism  language-python">pip install python<span class="token operator">-</span>decouple
-</code></pre>
-<pre class=" language-python"><code class="prism  language-python">pip install dj<span class="token operator">-</span>database<span class="token operator">-</span>url
 </code></pre>
 <h4 id="add-the-following-to-the-settings.py-imports">Add the following to the <code>settings.py</code> imports</h4>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> os  
@@ -182,7 +182,8 @@ git push heroku master
 <pre class=" language-python"><code class="prism  language-python">heroku pg<span class="token punctuation">:</span>push picsgarage DATABASE_URL <span class="token operator">-</span><span class="token operator">-</span>app picsgarage
 </code></pre>
 <h3 id="and-thats-it...your-app-should-now-be-deployed-to-heroku">And that’s it…Your app should now be deployed to Heroku</h3>
-<p>improved from <a href="https://github.com/jakhax/deploying-django-to-heroku-manual%5D%28https://github.com/jakhax/deploying-django-to-heroku-manual">jakhax</a>deployment manual</p>
+<pre><code>improved from [jakhax](https://github.com/jakhax/deploying-django-to-heroku-manual) deployment manual
+</code></pre>
 <blockquote>
 <p>© Victor Waichigo 2019</p>
 </blockquote>
