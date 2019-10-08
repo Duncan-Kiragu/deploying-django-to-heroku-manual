@@ -72,16 +72,12 @@ So, let’s install <code>whitenoise</code></p>
 <pre class=" language-python"><code class="prism  language-python">pip install whitenoise
 </code></pre>
 <p>Next, install <code>WhiteNoise</code> into your Django application. This is done in <code>settings.py’s middleware section</code> (at the top):</p>
-<pre class=" language-python"><code class="prism  language-python">MIDDLEWARE_CLASSES <span class="token operator">=</span> <span class="token punctuation">(</span>
-    <span class="token comment"># Simplified static file serving.</span>
-    <span class="token comment"># https://warehouse.python.org/project/whitenoise/</span>
-    <span class="token string">'whitenoise.middleware.WhiteNoiseMiddleware'</span><span class="token punctuation">,</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>```
-
-Add the following setting to `settings<span class="token punctuation">.</span>py` <span class="token keyword">in</span> the static files section to enable gzip functionality<span class="token punctuation">.</span>
-
-```python
-<span class="token comment"># Simplified static file serving.</span>
+<pre class=" language-python"><code class="prism  language-python">    MIDDLEWARE <span class="token operator">=</span> <span class="token punctuation">[</span>  
+  <span class="token string">'whitenoise.middleware.WhiteNoiseMiddleware'</span><span class="token punctuation">,</span>  
+<span class="token punctuation">]</span>
+</code></pre>
+<p>Add the following setting to <code>settings.py</code> in the static files section to enable gzip functionality.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># Simplified static file serving.</span>
 <span class="token comment"># https://warehouse.python.org/project/whitenoise/</span>
 
 STATICFILES_STORAGE <span class="token operator">=</span> <span class="token string">'whitenoise.storage.CompressedManifestStaticFilesStorage'</span>
